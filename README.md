@@ -3,11 +3,17 @@ hello-world
 
 GitHub Guide repo
 
-## Heading 1
+## 1.0 Purpose
 
-* bullet 1
-* bullet 2
+The purpose of hello-world is to test the functions of git and github
 
-## Heading 2
+* git init
+* git clone <url-of-remote-repository>.git
+* git add .
+* git push origin remote
 
-more text
+## 2.0 Methodology
+
+### 2.1 Ways & Means
+
+The functions will be tried on a simple test case.
