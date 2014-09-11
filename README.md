@@ -24,16 +24,29 @@ The purpose of _hello-world_ is to test the functions of _git_ and *github*
 * git clone <url-of-remote-repository>.git
 * git add .
 * git push origin remote
+* git pull origin master
 
 ## 2.0 Methodology
 
-### 2.1 Ways & Means
+### 2.1 Updating files on local repo and pushing
 
-The functions will be tried on a simple test case.
+After editing a file, run the following git commands in the local repo
 
-1. Step 1
-2. Step 2
-3. Step 3
+1. git add _filename_
+2. git commit -m "_message"
+3. git push origin master
+_note: you will have to enter your github username and password_
+
+If yo refresh the repo page on github, you will see the updates. YOu have sync'd the remote repo to the local repo.
+
+### 2.2 Updating files on the remote github repo and pulling
+
+After editing files on githib (using github's editor), run rhw followinf git commands in the local repo
+
+1. git pull origin master
+2. That's it!
+
+Now you can check and see that the file has been updated in the local repo. In other words, you have sync'd the local repo with the remote repo.
 
 Here is the link: [google.com](http://google.com)
 
