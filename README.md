@@ -18,7 +18,7 @@ GitHub Guide repo
 
 ## 1.0 Purpose
 
-The purpose of _hello-world_ is to test the functions of _git_ and *github*
+The purpose of _hello-world_ is to document the functions of _git_ and *github* and to show some common operations.
 
 * git init
 * git clone <url-of-remote-repository>.git
@@ -28,22 +28,52 @@ The purpose of _hello-world_ is to test the functions of _git_ and *github*
 
 ## 2.0 Methodology
 
-### 2.1 Updating files on local repo and pushing
+Use git on the local machine to track changes and versions of source code. Use github webservice to store a copy of the local repo and to share code with others and allow others to collaborate on the project.
+
+## 3.0 Common Operations
+
+### 3.1 Creating a new repo on github and cloning
+
+When you start a new project, you can create the new repo right on github.
+
+1. On github, click the + button on the upper right next to your username. Then choose New Repository. Fill in the Repository Name and Desccription. Then check Initialize this repository with a README. When everything is looks right, click Create Repository button. Guthib will create the new repository.
+2. On github, in the repo page, click the Copy to Clipboard button under clone url. The buton is bear the bottom of the righthand column.
+3. On your local machine, `cd` into the working directory where you want the repo.
+4. Type `git clone` and paste in the the url from the clipboard. Your local git will create the clone repo in your working directory. 
+
+### 3.2 Forking a repo and cloning
+
+Forking is a github operation and only happens on github. After forking a repo, if you want that repo on your local machine, you can clone the repo.
+
+1. On github, go to the repo you wish to fork and click teh fork button in the upper right. Github will create the fork under your username.
+2. Follow instruction 2, 3, and 4 above.
+
+### 3.3 Create a new repo on your local machine and push to github
+
+1. Create a new directory for the repo using `mkdir` and `cd` to that directory.
+2. Run `git init` to create the repo
+3. Add new source files to the repo.
+4. `git add .` to add all the new files
+5. `git commit -m "message"` to commit the changes
+6. `git push origin master` to push the files to github
+
+### 3.4 Updating files on local repo and pushing
 
 After editing a file, run the following git commands in the local repo
 
-1. git add _filename_
-2. git commit -m "_message"
-3. git push origin master
-_note: you will have to enter your github username and password_
+1. `git status` to see which files are not being tracked by git
+2. `git add _filename_` to tell git that there is a new file to track
+3. `git commit -m "_message"` to commit the changes
+4. `git push origin master` to push the files to github. _note: you will have to enter your github username and password_
+5. Optionally, `git log` to see the change history.
 
-If yo refresh the repo page on github, you will see the updates. YOu have sync'd the remote repo to the local repo.
+When you refresh the repo page on github, you will see the updates. You have sync'd the remote repo to the local repo.
 
-### 2.2 Updating files on the remote github repo and pulling
+### 3.5 Updating files on the remote github repo and pulling
 
-After editing files on githib (using github's editor), run rhw followinf git commands in the local repo
+After editing files on github (using github's editor), run the following git commands in the local repo
 
-1. git pull origin master
+1. `git pull origin master` to fetch and merge the files into your local repo.
 2. That's it!
 
 Now you can check and see that the file has been updated in the local repo. In other words, you have sync'd the local repo with the remote repo.
